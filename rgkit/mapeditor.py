@@ -1,5 +1,3 @@
-#!python
-
 import ast
 import Tkinter
 import sys
@@ -186,9 +184,12 @@ class MapEditor:
         if event.char in func_map:
             func_map[event.char]()
 
-if __name__ == '__main__':
+def main():
     print_instructions()
     if len(sys.argv) > 1:
         MapEditor(BLOCKSIZE, PADDING, sys.argv[1])
     else:
         MapEditor(BLOCKSIZE, PADDING)
+
+if __name__=="__main__":
+    main()
